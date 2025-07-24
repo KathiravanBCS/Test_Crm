@@ -1,0 +1,51 @@
+.employeeCalendarSection {
+  position: relative;
+  padding-bottom: var(--mantine-spacing-md);
+}
+
+.employeeCalendarSection:not(:last-child) {
+  border-bottom: 1px solid var(--mantine-color-gray-3);
+  margin-bottom: var(--mantine-spacing-md);
+}
+
+.calendarContainer {
+  position: relative;
+  background-color: var(--mantine-color-body);
+  border: 1px solid var(--mantine-color-gray-3);
+  border-radius: var(--mantine-radius-sm);
+  overflow: hidden;
+}
+
+/* Customize react-big-calendar for team view */
+.calendarContainer :global(.rbc-calendar) {
+  font-size: 12px;
+}
+
+.calendarContainer :global(.rbc-header) {
+  padding: 4px 2px;
+  font-size: 11px;
+}
+
+.calendarContainer :global(.rbc-time-slot) {
+  min-height: 20px;
+}
+
+.calendarContainer :global(.rbc-event) {
+  padding: 1px 2px;
+  font-size: 10px;
+}
+
+.calendarContainer :global(.rbc-event-content) {
+  line-height: 1.2;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .employeeCalendarSection:not(:last-child) {
+    border-bottom-color: var(--mantine-color-dark-4);
+  }
+
+  .calendarContainer {
+    border-color: var(--mantine-color-dark-4);
+  }
+}

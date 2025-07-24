@@ -1,0 +1,44 @@
+.header {
+  background-color: var(--mantine-color-gray-0);
+  border-bottom: 1px solid var(--mantine-color-gray-3);
+}
+
+.scrollArea {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.serviceItem {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.serviceItem:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--mantine-shadow-sm);
+}
+
+.serviceItem[data-selected="true"] {
+  background-color: var(--mantine-color-green-0);
+  border-color: var(--mantine-color-green-4);
+}
+
+.subItemsContainer {
+  background-color: var(--mantine-color-gray-0);
+  padding: var(--mantine-spacing-sm);
+  border-radius: var(--mantine-radius-sm);
+  margin-top: var(--mantine-spacing-xs);
+}
+
+.subItem {
+  padding: 4px 0;
+}
+
+.checkIcon {
+  color: var(--mantine-color-green-6);
+}
+
+.totalRow {
+  border-top: 1px solid var(--mantine-color-gray-3);
+  padding-top: var(--mantine-spacing-xs);
+}

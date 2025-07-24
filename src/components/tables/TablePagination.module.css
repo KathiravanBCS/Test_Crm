@@ -1,0 +1,56 @@
+.paginationContainer {
+  border-top: 1px solid var(--mantine-color-gray-2);
+  background-color: var(--mantine-color-gray-0);
+}
+
+.recordsSelectInput {
+  width: 60px;
+  height: 28px;
+  min-height: 28px;
+}
+
+.recordsSelectDropdown {
+  font-size: var(--mantine-font-size-sm);
+}
+
+.paginationControl {
+  height: 32px;
+  min-width: 32px;
+  font-size: var(--mantine-font-size-sm);
+  transition: background-color 150ms ease;
+}
+
+.paginationControl:hover {
+  background-color: var(--mantine-color-gray-1);
+}
+
+.paginationControl[data-active] {
+  background-color: var(--mantine-color-blue-6);
+  border: none;
+  color: white;
+}
+
+.paginationControl[data-active]:hover {
+  background-color: var(--mantine-color-blue-7);
+}
+
+.paginationDots {
+  height: 32px;
+  min-width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paginationItem {
+  font-weight: 500;
+}
+
+.paginationEdgeControl {
+  color: var(--mantine-color-gray-6);
+  transition: background-color 150ms ease;
+}
+
+.paginationEdgeControl:hover {
+  background-color: var(--mantine-color-gray-1);
+} 

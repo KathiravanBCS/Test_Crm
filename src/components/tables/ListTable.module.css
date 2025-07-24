@@ -1,0 +1,31 @@
+.dataTable {
+  /* Ensure sort icons are visible */
+  & th[data-sortable] {
+    cursor: pointer !important;
+    user-select: none;
+    
+    &:hover {
+      background-color: var(--mantine-color-gray-1);
+    }
+  }
+  
+  & tbody tr {
+    transition: all 150ms ease;
+    
+    &:hover {
+      background-color: var(--mantine-color-blue-0);
+      transform: translateX(2px);
+      box-shadow: inset 3px 0 0 0 var(--mantine-color-blue-5);
+    }
+    
+    &[data-row-selected] {
+      background-color: var(--mantine-color-blue-0);
+      box-shadow: inset 3px 0 0 0 var(--mantine-color-blue-6);
+      
+      &:hover {
+        background-color: var(--mantine-color-blue-1);
+      }
+    }
+  }
+}
+

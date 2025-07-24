@@ -1,0 +1,60 @@
+/* Email content styling */
+.email-content {
+  /* Reset styles for email HTML content */
+  font-family: inherit;
+  color: inherit;
+}
+
+.email-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.email-content a {
+  color: var(--mantine-color-blue-6);
+  text-decoration: none;
+}
+
+.email-content a:hover {
+  text-decoration: underline;
+}
+
+.email-content pre {
+  background-color: var(--mantine-color-gray-0);
+  padding: var(--mantine-spacing-sm);
+  border-radius: var(--mantine-radius-sm);
+  overflow-x: auto;
+}
+
+.email-content blockquote {
+  border-left: 3px solid var(--mantine-color-gray-4);
+  padding-left: var(--mantine-spacing-md);
+  margin-left: 0;
+  color: var(--mantine-color-gray-7);
+}
+
+/* Hover effects */
+.hover-card:hover {
+  background-color: var(--mantine-color-gray-0);
+}
+
+.hover-highlight:hover {
+  background-color: var(--mantine-color-gray-0);
+  transform: translateX(2px);
+}
+
+/* Split view adjustments */
+@media (max-width: 1200px) {
+  .outlook-split-view {
+    flex-direction: column;
+  }
+  
+  .outlook-list-panel {
+    width: 100% !important;
+    max-height: 50vh;
+  }
+  
+  .outlook-detail-panel {
+    width: 100% !important;
+  }
+}

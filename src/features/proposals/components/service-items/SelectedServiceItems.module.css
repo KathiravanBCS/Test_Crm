@@ -1,0 +1,40 @@
+.header {
+  background-color: var(--mantine-color-gray-0);
+  border-bottom: 1px solid var(--mantine-color-gray-3);
+}
+
+.scrollArea {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.serviceCard {
+  transition: all 0.2s ease;
+}
+
+.serviceCard:hover {
+  box-shadow: var(--mantine-shadow-sm);
+}
+
+.notesInput {
+  flex: 1;
+}
+
+.notesInput textarea {
+  resize: none;
+}
+
+.componentsSection {
+  background-color: var(--mantine-color-gray-0);
+  padding: var(--mantine-spacing-sm);
+  border-radius: var(--mantine-radius-sm);
+}
+
+.totalRow {
+  border-top: 1px solid var(--mantine-color-gray-3);
+  padding-top: var(--mantine-spacing-xs);
+}
+
+.priceInput {
+  width: 150px;
+}

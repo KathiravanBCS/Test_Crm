@@ -1,0 +1,186 @@
+/* Calendar Container */
+.calendarContainer {
+  position: relative;
+  background-color: var(--mantine-color-body);
+  border-radius: var(--mantine-radius-md);
+  overflow: hidden;
+}
+
+/* Event Content Styling */
+.eventContent {
+  padding: 2px 4px;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Health Status Indicator */
+.healthIndicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+
+/* Override react-big-calendar styles for Mantine theme */
+:global(.rbc-calendar) {
+  font-family: var(--mantine-font-family);
+  background-color: var(--mantine-color-body);
+}
+
+:global(.rbc-header) {
+  padding: 8px 4px;
+  font-weight: 500;
+  font-size: var(--mantine-font-size-sm);
+  color: var(--mantine-color-text);
+  background-color: var(--mantine-color-gray-0);
+  border-bottom: 1px solid var(--mantine-color-gray-3);
+}
+
+:global(.rbc-today) {
+  background-color: var(--mantine-color-blue-0);
+}
+
+:global(.rbc-off-range-bg) {
+  background-color: var(--mantine-color-gray-0);
+}
+
+:global(.rbc-event) {
+  padding: 2px 4px;
+  background-color: var(--mantine-color-blue-6);
+  border: none;
+  border-radius: var(--mantine-radius-sm);
+  color: white;
+  font-size: var(--mantine-font-size-xs);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+:global(.rbc-event:hover) {
+  background-color: var(--mantine-color-blue-7);
+  transform: translateY(-1px);
+  box-shadow: var(--mantine-shadow-sm);
+}
+
+:global(.rbc-event.rbc-selected) {
+  background-color: var(--mantine-color-blue-8);
+}
+
+:global(.rbc-event-label) {
+  font-size: var(--mantine-font-size-xs);
+  display: none;
+}
+
+:global(.rbc-event-content) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+:global(.rbc-day-slot .rbc-event) {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+:global(.rbc-slot-selection) {
+  background-color: var(--mantine-color-blue-1);
+  border: 1px dashed var(--mantine-color-blue-6);
+}
+
+:global(.rbc-time-view) {
+  border-top: 1px solid var(--mantine-color-gray-3);
+}
+
+:global(.rbc-time-header-content) {
+  border-left: 1px solid var(--mantine-color-gray-3);
+}
+
+:global(.rbc-time-content) {
+  border-top: 1px solid var(--mantine-color-gray-3);
+}
+
+:global(.rbc-time-content > * + * > *) {
+  border-left: 1px solid var(--mantine-color-gray-2);
+}
+
+:global(.rbc-timeslot-group) {
+  border-bottom: 1px solid var(--mantine-color-gray-2);
+}
+
+:global(.rbc-time-slot) {
+  color: var(--mantine-color-dimmed);
+  font-size: var(--mantine-font-size-xs);
+}
+
+:global(.rbc-agenda-view) {
+  color: var(--mantine-color-text);
+}
+
+:global(.rbc-agenda-table) {
+  border: 1px solid var(--mantine-color-gray-3);
+  font-size: var(--mantine-font-size-sm);
+}
+
+:global(.rbc-agenda-time-cell) {
+  padding: 8px;
+  white-space: nowrap;
+  color: var(--mantine-color-dimmed);
+}
+
+:global(.rbc-agenda-date-cell) {
+  padding: 8px;
+  font-weight: 500;
+}
+
+:global(.rbc-agenda-event-cell) {
+  padding: 8px;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  :global(.rbc-header) {
+    background-color: var(--mantine-color-dark-6);
+    border-bottom-color: var(--mantine-color-dark-4);
+  }
+
+  :global(.rbc-today) {
+    background-color: var(--mantine-color-dark-5);
+  }
+
+  :global(.rbc-off-range-bg) {
+    background-color: var(--mantine-color-dark-7);
+  }
+
+  :global(.rbc-time-content > * + * > *) {
+    border-left-color: var(--mantine-color-dark-4);
+  }
+
+  :global(.rbc-timeslot-group) {
+    border-bottom-color: var(--mantine-color-dark-4);
+  }
+
+  :global(.rbc-agenda-table) {
+    border-color: var(--mantine-color-dark-4);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .eventContent {
+    font-size: 10px;
+  }
+
+  :global(.rbc-toolbar) {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  :global(.rbc-toolbar-label) {
+    order: -1;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 8px 0;
+  }
+}

@@ -1,0 +1,14 @@
+/* Hide mantine-datatable empty state when we have data */
+.mantine-datatable-empty-state[data-active="true"] {
+  display: none !important;
+}
+
+/* Alternative: hide based on parent having rows */
+.mantine-datatable-table:has(tbody tr:not(.mantine-datatable-empty-row)) ~ .mantine-datatable-empty-state {
+  display: none !important;
+}
+
+/* Hide empty state that appears after table with data */
+.mantine-datatable:has(.mantine-datatable-table tbody tr:not(.mantine-datatable-empty-row)) .mantine-datatable-empty-state {
+  display: none !important;
+}
